@@ -4,7 +4,7 @@
  * @version:
  * @Date: 2024-07-07 22:02:21
  * @LastEditors: Wang Xi
- * @LastEditTime: 2024-07-12 01:38:49
+ * @LastEditTime: 2024-07-18 23:10:21
  */
 import request from "@/utils/request";
 import { ResponseType } from "../../type";
@@ -14,6 +14,8 @@ enum API {
   STUDENT_LIST = "student/list",
   DELETE_STUDENT = "student/delete",
   SAVE_STUDENT = "student/saveOrUpdate", // 保存学生信息
+  SAVE_STUEDENT_COURSES = "student/saveStuedentCourses", // 保存学生信息
+  GET_STUEDENT_COURSES = "student/coursesListByStudentId", // 保存学生信息
 }
 // 获取权限列表
 export const reqGetStudentList = (data: any): Promise<ResponseType> =>
@@ -22,11 +24,9 @@ export const reqDelStudentById = (id: number | string): Promise<ResponseType> =>
   request.get(API.DELETE_STUDENT + "/" + id);
 export const reqSaveStudent = (data: any): Promise<ResponseType> =>
   request.post(API.SAVE_STUDENT, data);
-// export const reqSavePremission = (data: any) =>
-//   request.post(API.SAVE_PERMISSION_URL, data);
-// export const reqUpdatePrmission = (data: any) =>
-//   request.put(API.UPDATE_PERMISSION_URL, data);
-// export const reqSaveOrUpdatePremission = (data: any) =>
-//   data.id ? reqUpdatePrmission(data) : reqSavePremission(data);
-// export const reqDeletePremission = (id: number) =>
-//   request.delete(replacePathParams(API.DELETE_PREMISSION_URL, { id }));
+// 保存学生选课信息
+export const reqSaveStudentCourses = (data: any): Promise<ResponseType> =>
+  request.post(API.SAVE_STUEDENT_COURSES, data);
+
+export const reqGetStudentCourses = (id: any): Promise<ResponseType> =>
+  request.get(API.GET_STUEDENT_COURSES + "/" + id);

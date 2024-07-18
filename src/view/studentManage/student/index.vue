@@ -4,7 +4,7 @@
  * @version: 
  * @Date: 2024-06-05 23:43:04
  * @LastEditors: Wang Xi
- * @LastEditTime: 2024-07-16 23:53:35
+ * @LastEditTime: 2024-07-17 00:33:50
 -->
 <template>
   <div class="student_manage">
@@ -456,7 +456,11 @@ const rowClick = (row: any) => {
 };
 const router = useRouter();
 const allocation = (row: any) => {
-  router.push("/studentManage/student/allocation" + row.id);
+  router.push(
+    "/studentManage/student/allocation/" +
+      row.id +
+      `?name=${row.name}&age=${row.age}&grade=${row.grade}`,
+  );
 };
 getList();
 </script>
