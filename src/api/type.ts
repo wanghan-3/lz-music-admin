@@ -1,7 +1,7 @@
 export interface ResponseType<D = null> {
   code: number;
   data: D;
-  msg: string;
+  message: string;
 }
 // 列表带分页数据 通用类型
 export interface ListRes {

@@ -4,10 +4,10 @@
  * @version:
  * @Date: 2024-07-07 22:02:21
  * @LastEditors: Wang Xi
- * @LastEditTime: 2024-07-18 23:10:21
+ * @LastEditTime: 2024-07-29 01:43:40
  */
 import request from "@/utils/request";
-import { ResponseType } from "../../type";
+import { ResponseType } from "../type";
 // import { replacePathParams } from "@/utils";
 
 enum API {

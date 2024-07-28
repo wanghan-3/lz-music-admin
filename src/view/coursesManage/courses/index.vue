@@ -96,6 +96,8 @@
           </el-table-column>
           <el-table-column label="课程描述" prop="des" align="center">
           </el-table-column>
+          <el-table-column label="价格（元）" prop="price" align="center">
+          </el-table-column>
           <el-table-column label="操作" align="center" width="150">
             <template #="{ row }">
               <el-popconfirm
@@ -158,6 +160,14 @@
             v-model="saveCourseForm.duration"
             placeholder="请输入课程时长"
             :min="0"
+          ></el-input-number>
+        </el-form-item>
+        <el-form-item label="价格（元）：" prop="price">
+          <el-input-number
+            v-model="saveCourseForm.price"
+            placeholder="请输入价格"
+            :min="0"
+            :max="9999"
           ></el-input-number>
         </el-form-item>
         <el-form-item label="容纳最大人数：" prop="max_persons">

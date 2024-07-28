@@ -91,7 +91,7 @@ const submitLogin = async () => {
   height: 100vh;
   background: url("@/assets/icons/login-bg.svg");
   background-size: 100% 100%;
-  background-color: rgb(59, 96, 190);
+  background-color: #f1f1f1;
   @include center();
   .login_model {
     width: 1000px;
